@@ -1,0 +1,1011 @@
+/* ----- Общие стили, применяемые на нескольких страницах ------ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+  overflow-x: hidden;
+}
+.white_theme{
+  background-color: #ffff;
+  min-height: 100vh;
+}
+.header-light, .header-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "InterLight";
+  padding-top: 1.5vw;
+  z-index: 10;
+}
+.header-light a, .header-dark a{
+  text-decoration: none;
+  font-size: 1.3vw;
+}
+.header-light a{
+  color: #212121;
+}
+.header-dark a{
+  color: #ffffff;
+}
+.header-right a{
+  margin: 2vw;
+}
+.header-left a,
+.header-right a:first-child,
+.header-right a:last-child {
+  margin: 0 1vw;
+}
+.burger-menu {
+  display: none;
+}
+.burger-icon {
+  margin: 0 2vw;
+  cursor: pointer;
+}
+.mobile-menu {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  transition: top 0.3s ease;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3vw;
+}
+.mobile_hr, .mobile_hr-dark{
+  height: 0.15vh;
+  width: 90%;
+}
+.mobile_hr{
+  background-color: #000;
+}
+.mobile_hr-dark{
+  background-color: #fff;
+}
+.burger-img{
+  width: 8vw;
+  margin: 3vw;
+}
+.arrow-menu{
+  width: 4vw;
+  margin-right: 5vw;
+}
+.mobile-menu.active {
+  top: 0;
+}
+.mobile-menu a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 2vw 4.5vw 2vw 4.5vw;
+}
+.mobile-menu a:last-child {
+  margin-bottom: 4vw;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw;
+}
+.main-menu-cols {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-form, .footer-form_dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  z-index: 1;
+  padding-top: 12vw;
+  position: relative;
+}
+.footer-form {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%,
+  rgba(255, 255, 255, 0.8) 20%,
+  rgba(255, 255, 255, 0.9) 25%,
+  rgba(255, 255, 255, 1) 100%);
+}
+.footer-form_dark {
+  background: linear-gradient(to bottom,
+  rgba(33, 33, 33, 0.25) 0%,
+  rgba(33, 33, 33, 0.35) 5%,
+  rgba(33, 33, 33, 0.75) 10%,
+  rgba(33, 33, 33, 0.80) 20%,
+  rgba(33, 33, 33, 0.90) 45%,
+  rgba(33, 33, 33, 0.95) 75%,
+  rgba(33, 33, 33, 1) 100%);
+}
+.footer_light{
+  margin: 0 2vw 0 2vw;
+  position: relative;
+}
+.footer-form-text, .footer-form-text_dark {
+  display: flex;
+  flex-direction: column;
+}
+.footer-form-text p{
+  color: #212121;
+  opacity: 70%;
+  font-family: 'InterLight';
+  font-size: 1.4vw;
+  margin: 0 0 1vw 0.3vw;
+}
+.footer-form-text_dark p{
+  color: #ffffff;
+  opacity: 70%;
+  font-family: 'InterLight';
+  font-size: 1.4vw;
+  margin: 0 0 1vw 0.3vw;
+}
+.footer-form-text h3{
+  color: #212121;
+  font-family: 'InterMedium';
+  font-size: 3.2vw;
+}
+.footer-form-text_dark h3{
+  color: #ffffff;
+  font-family: 'InterMedium';
+  font-size: 3.2vw;
+}
+.footer-form-image img {
+  padding-top: 2.5vw;
+  width: 2.5vw;
+  cursor: pointer;
+}
+.custom-hr_light {
+  height: 3px;
+  background: #212121;
+  border: none;
+  margin: 2vw 0 10vw 0;
+}
+.custom-hr_dark {
+  height: 3px;
+  background: #ffffff;
+  border: none;
+  margin: 2vw 0 10vw 0;
+}
+.footer_columns, .footer_columns-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer_columns h4{
+  color: #212121;
+  opacity: 80%;
+  font-family: 'InterLight';
+  font-size: 1.3vw;
+  padding-bottom: 1.5vw;
+}
+.footer_columns-dark h4{
+  color: #ffffff;
+  opacity: 80%;
+  font-family: 'InterLight';
+  font-size: 1.3vw;
+  padding-bottom: 1.5vw;
+}
+.footer_columns p{
+  color: #212121;
+  font-family: 'InterMedium';
+  font-size: 1.3vw;
+  line-height: 1.4;
+}
+.footer_columns-dark p{
+  color: #ffffff;
+  font-family: 'InterMedium';
+  font-size: 1.3vw;
+  line-height: 1.4;
+}
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4B4B4B20;
+  backdrop-filter: blur(16px);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  width: 50%;
+  text-align: left;
+}
+.popup-title {
+  font-size: 3vw;
+  margin-bottom: 4vw;
+  color: #212121;
+  font-family: 'InterMedium';
+}
+.contact-info {
+  color: #212121;
+  text-align: left;
+  font-size: 1.5vw;
+  font-family: 'InterSemiBold';
+  margin: 1.5vw 0 1vw 0;
+}
+.input-field {
+  width: 100%;
+  padding: 0.8vw;
+  border: 0.15vw solid #21212150;
+  font-size: 1vw;
+  box-sizing: border-box;
+  margin-bottom: 1.5vw;
+  font-family: 'InterLight';
+}
+.order-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.submit-btn {
+  color: #212121;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-family: 'InterSemiBold';
+  display: flex;
+  justify-content: center;
+  margin-top: 1vw;
+}
+.mode{
+  padding-right: 10vw;
+}
+.socials{
+  padding-right: 16vw;
+}
+.socials p{
+  cursor: pointer;
+}
+.address{
+  text-align: right;
+}
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  width: 120%;
+}
+.footer-container {
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  overflow: hidden;
+}
+.footer-word {
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+  width: 100%;
+  font-family: 'InterLight';
+  color: #212121;
+  font-size: 20vw;
+  line-height: 0.8;
+  transform: translateY(27%);
+}
+.page_title, .page_title_short {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.page_title h2{
+  font-family: 'InterLight';
+  text-align: justify;
+  width: 101%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.events_title, .projects_title{
+  color: #ffff;
+  letter-spacing: 0.235em;
+  z-index: 1;
+}
+.creators_title, .shop_title{
+  color: #000;
+  letter-spacing: 0.24em;
+}
+/* ----- Главная страница ------ */
+.order_container{
+  background-color: rgb(114, 110, 110);
+  min-height: 42vw;
+  margin: 2vw;
+  background-image: url("../images/bg_main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  font-family: "InterRegular";
+  z-index: 0;
+}
+.order_description {
+  position: absolute;
+  right: 1vw;
+  bottom: 2vw;
+  margin: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.order_description p {
+  letter-spacing: 0.1em;
+  color: #ffff;
+  font-size: 3.8vw;
+  line-height: 1.2;
+}
+.bg-line{
+  position: absolute;
+  transform: translate(0%, 26%);
+  z-index: 1;
+}
+.bg-line img{
+  width: 74.6vw;
+}
+.bg-line_mobile{
+  display: none;
+}
+.about{
+  margin-left: 2vw;
+  font-size: 1.5vw;
+}
+.about h3{
+  font-family: 'InterLightItalic';
+}
+.about p{
+  font-family: 'InterLight';
+  line-height: 1.15;
+}
+.mb{
+  display: none;
+}
+.menu{
+  padding-top: 10vw;
+  display: flex;
+  z-index: 3;
+}
+.divider_mobile{
+  display: none;
+}
+.column {
+  width: 26vw;
+  height: 110vh;
+  position: relative;
+}
+.divider {
+  width: 3px;
+  background-color: #B8B8B8;
+  z-index: 1;
+}
+.col-label {
+  position: absolute;
+  bottom: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 2vw;
+  font-family: "InterMedium";
+  z-index: 1; 
+}
+.column-1, .column-2, .column-3, .column-4{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.column-1{
+  background-image: url('/images/bg_creators.png');
+}
+.column-2{
+  background-image: url('/images/bg_projects.png');
+}
+.column-3{
+  background-image: url('/images/bg_events.png');
+}
+.column-4{
+  background-image: url('/images/bg_shop.png');
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.column:hover .bg-video {
+  opacity: 1;
+}
+.column:hover .col-label {
+  color: white;
+}
+.creators_title{
+  font-size: 9.9vw;
+}
+.projects_title{
+  font-size: 10vw;
+  transition: 0.3s ease;
+}
+.events_title{
+  font-size: 12vw;
+}
+.shop_title{
+  font-size: 11.8vw;
+}
+/* ------- Страница 404 ------- */
+.text_404{
+  color: white;
+  font-family: "InterLight";
+  display: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8vw;
+}
+.text_404 p{
+  opacity: 80%;
+  line-height: 1.2;
+  font-size: 2em;
+}
+.text_404 a{
+  opacity: 80%;
+  font-size: 2em;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: #ffffff;
+}
+.text_404 h2{
+  padding: 2vw 0 2vw 0;
+  font-size: 18vw;
+}
+/* ------- Страница Проекты ------- */
+.cases {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 93%;
+  overflow: hidden;
+}
+.case {
+  width: calc(100% + 10px);
+  margin-left: -6px;
+  height: 100%;
+  position: relative;
+  margin-top: 42vh;
+}
+.case-1-wrapper, 
+.case-2-wrapper,
+.case-3-wrapper,
+.case-4-wrapper,
+.case-5-wrapper {
+  position: absolute;
+  width: 100%;
+}
+.case-1-wrapper {
+  top: 15%;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+.case-2-wrapper {
+  top: 20%;
+  z-index: 1;
+}
+.case-3-wrapper {
+  top: 25%;
+  z-index: 3;
+}
+.case-4-wrapper {
+  top: 30%;
+  z-index: 4;
+}
+.case-5-wrapper {
+  top: 35%;
+  z-index: 5;
+}
+.folder {
+  width: 100%;
+  height: auto;
+  position: relative;
+  user-select: none;
+}
+.case-1-text, 
+.case-2-text, 
+.case-3-text, 
+.case-4-text, 
+.case-5-text {
+  position: absolute;
+  color: #ffff;
+  font-family: 'InterLightItalic';
+  text-align: center;
+  width: 30%;
+  font-size: 1.7vw;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.case-1-text {
+  top: 2.5%;
+  left: 58%;
+  z-index: 10;
+  cursor: pointer;
+}
+.case-2-text {
+  top: 3%;
+  left: 81%;
+}
+.case-3-text {
+  top: 3%;
+  left: 58%;
+}
+.case-4-text {
+  top: 3%;
+  left: 81%;
+}
+.case-5-text {
+  top: 4%;
+  left: 59%;
+}
+.case-1-image {
+  position: absolute;
+  width: 23vw;
+  top: 14%;
+  left: 8%;
+  z-index: 10;
+  border-radius: 1vw;
+}
+.avata-title {
+  position: absolute;
+  color: #ffff;
+  font-family: 'InterItalic';
+  font-size: 1.5vw;
+  top: 17%;
+  left: 39%;
+  z-index: 10;
+}
+.avata-about{
+  position: absolute;
+  color: #ffff;
+  opacity: 70%;
+  font-family: 'InterMedium';
+  font-size: 1.1vw;
+  top: 21%;
+  left: 39%;
+  z-index: 10;
+  line-height: 1.2;
+}
+.details{
+  position: absolute;
+  font-family: 'InterMedium';
+  font-size: 1vw;
+  top: 31%;
+  left: 38.8%;
+  z-index: 10;
+  line-height: 1.2;
+  padding: 0.8vw 1.8vw 0.8vw 1.8vw;
+  border: 0.12vw solid #fff;
+  background-color: #2F2F2F;
+  transition: background-color 0.2s ease;
+  text-decoration: none;
+  color: #ffff;
+}
+.details:hover {
+  background-color: #212121;
+}
+.avata-content{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+/* ------- Страница проекта AVATA PRIVAT CLUB ------- */
+.back_button{
+  margin: 3vw 0 0 2vw;
+}
+.back_button a, .back_button_2 a{
+  color: #fff;
+  font-family: 'InterExtraLight';
+  font-size: 1.3vw;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.avata_project{
+  margin: 3vw 0 0 2vw;
+  display: flex;
+}
+.avata_project img{
+  width: 46vw;
+}
+.description{
+  margin-left: 2vw;
+  position: relative;
+  width: 100%;
+}
+.description h2{
+  font-family: 'InterRegular';
+  font-size: 3.5vw;
+  color: #fff;
+}
+.description p{
+  position: absolute;
+  bottom: 0;
+  font-family: 'InterItalic';
+  font-size: 1.2vw;
+  color: #fff;
+}
+.author{
+  margin-right: 4vw;
+}
+.white-hr{
+  margin-top: 2vw;
+  color: white;
+  width: 100%;
+  border: 0.1vw solid #fff;
+  margin-bottom: 0;
+}
+.current-project{
+  display: flex;
+}
+.current-project p{
+  color: #fff;
+  font-family: 'InterLightItalic';
+  font-size: 1vw;
+  padding: 1vw 2.5vw 1vw 2vw;
+}
+.selected{
+  background-color: rgb(78,78,78);
+}
+.about_project{
+  margin: 2vw;
+}
+.title_1{
+  font-family: 'InterRegular';
+  font-size: 2.5vw;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.about_project p{
+  padding-top: 2vw;
+  font-family: 'InterLight';
+  font-size: 1.15vw;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: 0.8px;
+}
+.date{
+  font-family: 'InterLightItalic';
+  font-size: 4.5vw;
+  color: #fff;
+  margin-top: 4vw;
+}
+.gray_day{
+  color: #FFFFFF; 
+  opacity: 30%;
+}
+.stage{
+  font-family: 'InterRegular';
+  font-size: 2.5vw;
+  color: #fff;
+  margin-top: 1vw;
+}
+.gallery-1, .gallery-2{
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.gallery-1 img{
+  width: 28vw;
+}
+.gallery-2 img{
+  width: 45vw;
+}
+.gallery-carousel{
+  display: none;
+}
+.gallery-shop-carousel{
+  display: none;
+}
+/* ------- Страница Команда ------- */
+.background-lines {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.lines {
+  height: 100%;
+  position: absolute;
+}
+.lines:nth-child(1) {
+  left: 25%;
+  transform: translateX(-50%);
+}
+.lines:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lines:nth-child(3) {
+  left: 75%;
+  transform: translateX(-50%);
+}
+.lines:nth-child(4) {
+  left: 25%;
+  transform: translateX(-50%);
+}
+.lines:nth-child(5) {
+  left: 75%;
+  transform: translateX(-50%);
+}
+.divider-line {
+  height: 170%;
+}
+.creators-container {
+  height: 170vh;
+  position: relative;
+  width: 100%;
+}
+.photo-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.photo-title {
+  display: flex;
+  font-family: 'InterLightItalic';
+  font-size: 1.2vw;
+  margin-bottom: 0.5vw;
+  justify-content:space-between;
+}
+.creators-container .block {
+  cursor: pointer;
+  border: 0.15vw solid black;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.creators-container .block img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  vertical-align: top; 
+}
+.photo-wrapper:nth-child(1) { top: 4%; left: 8%; width: 36vw; }
+.photo-wrapper:nth-child(3) { top: 2%; right: 3%; width: 16vw; }
+.photo-wrapper:nth-child(2) { top: 25%; left: 52%; width: 16vw; }
+.photo-wrapper:nth-child(4) { top: 45%; left: 2%; width: 20vw; }
+.photo-wrapper:nth-child(5) { top: 73%; left: 27%; width: 32vw; }
+.photo-wrapper:nth-child(6) { top: 60%; right: 6%; width: 16vw; }
+
+/* ------- Страница Магазин ------- */
+.item-carousel-wrapper {
+  margin: 15vh 0 5vh 0;
+  width: 100%;
+  position: relative;
+}
+.item-carousel-wrapper.animated .item-carousel {
+  transition: transform 0.5s ease;
+}
+.item-carousel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: grab;
+}
+.item {
+  user-select: none;
+}
+.item a{
+  text-decoration: none;
+}
+.item-image-1, .item-image-2, .item-image-3, .item-image-4, .item-image-5,
+.item-image-6, .item-image-7, .item-image-8, .item-image-9, .item-image-10{
+  height: 10vw;
+  width: 16vw;
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-image-1 img {
+  width: 2vw;
+  pointer-events: none;
+}
+.item-image-2 img {
+  width: 11vw;
+  cursor: pointer;
+}
+.item-image-3 img {
+  width: 9vw;
+  pointer-events: none;
+}
+.item-image-4 img {
+  width: 6vw;
+  pointer-events: none;
+}
+.item-image-5 img {
+  width: 6vw;
+  pointer-events: none;
+}
+.item-image-6 img{
+  width: 12vw;
+  pointer-events: none;
+}
+.item-image-7 img{
+  width: 11vw;
+  pointer-events: none;
+}
+.item-image-8 img{
+  width: 8.5vw;
+  pointer-events: none;
+}
+.item-image-9 img{
+  width: 6.5vw;
+  pointer-events: none;
+}
+.item-image-10 img{
+  width: 9vw;
+  pointer-events: none;
+}
+.item-name {
+  font-family: 'InterLightItalic';
+  color: #000;
+  font-size: 1vw;
+  padding: 0.5vw;
+  text-align: left;
+}
+.counter, .counter_mobile {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  font-size: 5vw;
+  bottom: 0;
+  left: 0;
+  padding: 2vw 0 2vw 0;
+  font-family: 'InterExtraLightItalic';
+}
+.counter_mobile, .item_name{
+  display: none;
+}
+.current-page{
+  margin-left: 2vw;
+}
+.total-page{
+  margin-right: 2vw;
+}
+.separator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ------- Страница товара "Шопер" ------- */
+.shop_container{
+  border: 0.15vw solid rgb(77,77,77);
+  min-height: 90vh;
+  margin: 1vw;
+}
+.back_button_2{
+  margin: 2.5vw 0 0 2vw;
+}
+.shoper{
+  display: flex;
+  margin: 2vw 0 0 4vw;
+  font-family: 'InterLight'
+}
+.shop-col{
+  width: 50%;
+}
+.shoper_title{
+  font-family: 'InterLight';
+  margin: 3vw 0 0 0;
+  font-size: 5vw;
+  color: #fff;
+  width: auto;
+  height: 200px;
+}
+.shoper_title p{
+  font-size: 1.4vw;
+  color: #fff;
+  opacity: 70%;
+  text-align: right;
+  margin-right: 3vw;
+}
+.shop_description{
+  margin: 5vw 0 0 0;
+  font-size: 1.5vw;
+  color: #fff;
+}
+.shop_description p{
+  margin-bottom: 2vw;
+  opacity: 70%;
+}
+.shoper-img{
+  width: 40vw;
+  height: 40vw;
+  padding-left: 3vw;
+}
+.price{
+  color: #fff;
+  opacity: 80%;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+.buy-button a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5vw;
+  padding: 0.5vw 3vw 0.5vw 3vw;
+  border: 0.1vw solid #fff;
+}
+/* ----- Страница События ------ */
+.divider-line-2{
+  height: 230%;
+}
+.order{
+  display: flex;
+  justify-content: center;
+}
+.order p{
+  color: #fff;
+  font-size: 1.3vw;
+  margin-top: 2vw;
+  font-family: 'InterExtraLight';
+  text-decoration: underline;
+  text-underline-offset: 0.8vh;
+  cursor: pointer;
+}
+.event-container {
+  height: 235vh;
+  position: relative;
+  width: 100%;
+}
+.event-container img{
+  width: 18vw;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.event-container img.large {
+  width: 19vw;
+}
+.event-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.event-title,.event-title_right {
+  display: flex;
+  font-family: 'InterLightItalic';
+  font-size: 2vw;
+  color: #fff;
+  padding-bottom: 0.5vw;
+}
+.event-title_right{
+  justify-content: right;
+}
+
+
+.event-wrapper:nth-child(1) { top: 5%; left: 8%; }
+.event-wrapper:nth-child(2) { top: 17%; left: 40%; }
+.event-wrapper:nth-child(3) { top: 9%; right: 10%; }
+.event-wrapper:nth-child(4) { top: 34%; left: 12%; }
+.event-wrapper:nth-child(5) { top: 45%; left: 44%; }
+.event-wrapper:nth-child(6) { top: 42%; right: 9% ; }
+.event-wrapper:nth-child(7) { bottom: 15%; left: 4%;}
+.event-wrapper:nth-child(8) { bottom: 2%; left: 35%;}
+.event-wrapper:nth-child(9) { bottom: 5%; right: 13%; }
