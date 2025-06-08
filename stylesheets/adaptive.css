@@ -1,0 +1,723 @@
+/* Смена страниц в хедере на бургер-меню */
+@media only screen and (max-width: 900px) {
+  .header-right {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .mobile-menu.active {
+    display: flex;
+  }
+  .arrow-menu{
+    width: 3vw;
+    margin-right: 5vw;
+  }
+  .header-left a {
+    margin: 0 2vw;
+  }
+  .header-light, .header-dark {
+    padding: 4vw 2vw 2vw 2vw;
+  }
+}
+/* Адаптив под телефон */
+@media only screen and (max-width: 768px) {
+  /* Общие стили для всех страниц */
+  .header-light a, .header-dark a{
+    font-size: 28px;
+  }
+  .arrow-menu{
+    width: 5vw;
+    margin-right: 5vw;
+  }
+  .bg-line_mobile{
+    display: block;
+    position: absolute;
+    transform: translate(0%, 50%);
+    z-index: 1;
+  }
+  .bg-line_mobile img{
+    width: 96vw;
+  }
+  .bg-line{
+    display: none;
+  }
+  .creators_title, .projects_title, .events_title, .shop_title{
+    font-size: 24vw;
+  }
+  .page_title, .page_title_short {
+    display: inline-block;
+    justify-content: center;
+    z-index: 0;
+    pointer-events: none;
+    animation: runningText 8s linear infinite;
+    white-space: nowrap;
+    padding-top: 4vw;
+    width: 400%;
+    overflow: hidden;
+  }
+  .popup-content {
+    width: 90%;
+  }
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .input-field {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .input-field:last-child {
+    margin-bottom: 0;
+  }
+  .popup-title{
+    font-size: 38px;
+    margin: 20px 0 50px;
+  }
+  .contact-info{
+    text-align: center;
+    width: 100%;
+    font-size: 26px;
+    margin: 12px 0 12px 0;
+  }
+  .order-form:last-child {
+    margin-bottom: 0;
+  }
+  .input-field {
+    width: 100%;
+    padding: 13px;
+    border: 0.15vw solid #21212150;
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .order-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px; 
+  }
+  .submit-btn {
+    font-size: 26px;
+    margin-top: 32px;
+  }
+  .footer_light{
+    margin: 0 4vw 0 4vw;
+  }
+  .footer-form-text p{
+    font-size: 4vw;
+    margin: 0 0 2vw 2vw;
+  }
+  .footer-form-text_dark p{
+    font-size: 4vw;
+    margin: 0 0 2vw 2vw;
+  }
+  .footer-form-text h3{
+    color: #212121;
+    font-family: 'InterMedium';
+    font-size: 9vw;
+    margin: 1vw 0 4vw 1vw;
+  }
+  .footer-form-text_dark h3{
+    color: #ffffff;
+    font-family: 'InterMedium';
+    font-size: 9vw;
+    margin: 1vw 0 4vw 1vw;
+  }
+  .footer-form-image img {
+    width: 8vw;
+    padding-bottom: 18vw;
+  }
+  .custom-hr_light {
+    height: 2px;
+    background: #212121;
+    border: none;
+    margin: 0;
+  }
+  .custom-hr_dark {
+    height: 2px;
+    background: #ffffff;
+    border: none;
+    margin: 0;
+  }
+  .footer_columns, .footer_columns-dark {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_columns {
+    background-color: #fff;
+  }
+  .footer_columns-dark{
+  background-color: #212121;
+  }
+  .footer_columns h4{
+    font-size: 5vw;
+    padding-bottom: 1.5vw;
+    margin-top: 6vw;
+  }
+  .footer_columns-dark h4{
+    font-size: 5vw;
+    padding-bottom: 1.5vw;
+    margin-top: 6vw
+  }
+  .footer_columns p{
+    font-size: 5vw;
+    line-height: 1.4;
+    padding-top: 2vw;
+  }
+  .footer_columns-dark p{
+    font-size: 5vw;
+    line-height: 1.4;
+    padding-top: 2vw;
+  }
+  .mb{
+    display: block;
+  }
+  .pc{
+    display: none;
+  }
+  /* Главная */
+  .about{
+    width: 100%;
+    height: 330px;
+    font-size: 4vw;
+    padding-top: 150px;
+    margin-left: 4vw;
+  }
+  .about h3{
+    font-family: 'InterLightItalic';
+  }
+  .about p{
+    font-family: 'InterLight';
+    line-height: 1.15;
+  }
+  .address{
+    text-align: left;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+  }
+  .column {
+    width: 100%;
+    height: 35vh;
+    z-index: 1;
+  }
+  .divider {
+    width: 100%;
+    height: 0.5vw;
+    background-color: #B8B8B8;
+  }
+  .bg-video {
+    opacity: 1 !important;
+  }
+  .divider_mobile{
+    display: block;
+    width: 100%;
+    height: 0.5vw;
+    background-color: #B8B8B8;
+    z-index: 1;
+  }
+  .col-label {
+    left: 25%;
+    color: #fff;
+    font-size: 8vw;
+  }
+  .order_container{
+    min-height: 84vw;
+    margin: 1.5vw 0 0 0;
+    background-image: url("../images/bg_main.png");
+    background-position: 80%;
+  }
+  .order_description p {
+    font-size: 6vw;
+  }
+  /* ------- Страница команда ------- */
+  .creators_title::after, .events_title::after, .projects_title::after, .shop_title::after {
+    content: attr(data-text);
+    padding-left: 30px;
+  }
+  .creators-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .divider-line {
+    height: 250%;
+  }
+  .photo-title {
+    display: flex;
+    font-family: 'InterLightItalic';
+    font-size: 1.2vw;
+    margin-bottom: 0.5vw;
+    justify-content: space-between;
+  }
+  .creators-container .block {
+    cursor: pointer;
+    border: 0.15vw solid black;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .creators-container .block img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+    vertical-align: top; 
+  }
+  .photo-title {
+    font-size: 4.5vw;
+    margin-bottom: 0.5vw;
+  }
+  .photo-wrapper:nth-child(1) { padding-top: 4vw; width: 88vw;}
+  .photo-wrapper:nth-child(3) { padding: 20vw 30vw 0 0; width: 58vw; }
+  .photo-wrapper:nth-child(2) { padding: 20vw 0 0 30vw; width: 58vw; }
+  .photo-wrapper:nth-child(4) { padding: 20vw 0 0 6vw; width: 82vw; }
+  .photo-wrapper:nth-child(5) { padding: 20vw 8vw 0 0;  width: 78vw; }
+  .photo-wrapper:nth-child(6) { padding: 20vw 0 0 25vw; width: 62vw; }
+
+  /* ------- Страница события ------- */
+  .divider-line-events {
+    height: 410%;
+    transform: translateY(-1%);
+  }
+  .order p{
+    color: #fff;
+    font-size: 5vw;
+    margin-top: 5vw;
+  }
+  .event-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-wrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  .event-container img{
+    width: 60vw;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .event-container img.large {
+    width: 62vw;
+  }
+  .event-title, .event-title_right {
+    display: flex;
+    font-family: 'InterLightItalic';
+    font-size: 6vw;
+    color: #fff;
+  }
+  .event-title, .event-title_right {
+    padding-bottom: 1.5vw;
+  }
+  .event-wrapper:nth-child(1) { padding: 26px 100px 0 0; }
+  .event-wrapper:nth-child(2) { padding: 26px 0 0 100px; }
+  .event-wrapper:nth-child(3) { padding: 26px 100px 0 0; }
+  .event-wrapper:nth-child(4) { padding: 26px 0 0 100px; }
+  .event-wrapper:nth-child(5) { padding: 26px 100px 0 0; }
+  .event-wrapper:nth-child(6) { padding: 26px 0 0 100px; }
+  .event-wrapper:nth-child(7) { padding: 26px 100px 0 0;;}
+  .event-wrapper:nth-child(8) { padding: 26px 0 0 100px;}
+  .event-wrapper:nth-child(9) { padding: 26px 100px 0 0; }
+    /* ------- Страница проекты ------- */
+  .cases {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+  .case {
+    width: 230vw;
+    margin-left: -75%;
+    height: 100%;
+    position: relative;
+    margin-top: 42vh;
+  }
+  .folder-2{
+    margin-left: -15%;
+  }
+  .case-2-wrapper {
+    top: 20%;
+    z-index: 1;
+  }
+  .case-2-wrapper img {
+    right: 13%;
+  }
+  .case-3-wrapper {
+    top: 25%;
+    z-index: 3;
+  }
+  .case-4-wrapper {
+    top: 30%;
+    z-index: 4;
+  }
+  .case-4-wrapper img {
+    right: 13%;
+  }
+  .case-1-text, 
+  .case-2-text, 
+  .case-3-text, 
+  .case-4-text, 
+  .case-5-text {
+    font-size: 4vw;
+  }
+  .case-1-text {
+    top: 2.5%;
+    left: 64%;
+  }
+  .case-2-text {
+    top: 3%;
+    left: 51%;
+  }
+  .case-3-text {
+    top: 3%;
+    left: 64%;
+  }
+  .case-4-text {
+    top: 3%;
+    left: 51%;
+  }
+  .case-5-text {
+    top: 4%;
+    left: 64%;
+  }
+  .case-1-wrapper {
+    top: 15%;
+    z-index: 1;
+  }
+  .case-2-wrapper {
+    top: 20%;
+    z-index: 1;
+  }
+  .case-3-wrapper {
+    top: 25%;
+    z-index: 3;
+  }
+  .case-4-wrapper {
+    top: 30%;
+    z-index: 4;
+  }
+  .case-5-wrapper {
+    top: 35%;
+    z-index: 5;
+  }
+  .avata-preview-img {
+    position: absolute;
+    top: 16%;
+    left: 35%;
+    border-radius: 3vw;
+    width: 39%;
+  }
+  .avata-title {
+    font-size: 4vw;
+    top: 60%;
+    left: 35%;
+  }
+  .avata-about{
+    font-size: 3vw;
+    top: 65%;
+    left: 35%;
+    line-height: 1.2;
+  }
+  .details{
+    font-size: 3.5vw;
+    top: 75%;
+    left: 35%;
+    line-height: 1.2;
+    padding: 2vw 7vw 2vw 7vw;
+    border: 0.12vw solid #fff;
+  }
+  /* ------- Страница проекта AVATA PRIVAT CLUB ------- */
+  .back_button img{
+    width: 6vw;
+    margin: 2vw 0 0 2.5vw;
+  }
+  .avata_project{
+    margin: 3vw 0 10vw 5vw;
+    display: flex;
+  }
+  .avata_project img{
+    width: 44vw;
+  }
+  .description{
+    margin-left: 7vw;
+    position: relative;
+    width: 100%;
+  }
+  .description h2{
+    font-size: 9vw;
+  }
+  .description p{
+    font-size: 4.5vw;
+    line-height: 1.2;
+  }
+  .current-project{
+    display: flex;
+    width: 100%;
+  }
+  .current-project p{
+    font-size: 5vw;
+    padding: 3vw 5vw 3vw 3vw;
+    flex: 1;
+    text-align: center;
+  }
+  .about_project{
+    margin: 6vw;
+  }
+  .title_1{
+    font-size: 8vw;
+    line-height: 1.25;
+  }
+  .about_project p{
+    padding-top: 2vw;;
+    font-size: 4vw;
+    line-height: 1.25;
+    letter-spacing: 0.8px;
+  }
+  .date{
+    font-family: 'InterLightItalic';
+    font-size: 14vw;
+    color: #fff;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  .gray_day{
+    color: #FFFFFF; 
+    opacity: 30%;
+    padding-left: 5vw;
+  }
+  .stage{
+    font-size: 8vw;
+    margin-top: 4vw;
+  }
+  .gallery-carousel{
+    display: block;
+  }
+  .gallery-1, .gallery-2{
+    display: none;
+  }
+  .gallery-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 2vw;
+    overflow: hidden; 
+  }
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3vw;
+  }
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+  }
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+  }
+  .carousel-counter{
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+    font-size: 5vw;
+    color: #AEAEAE;
+    font-family: 'InterExtraLight';
+  }
+  .carousel-slide img.active {
+    display: block;
+  }
+  .carousel-arrow {
+    width: 5vw;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prev {
+    margin-right: 8px;
+  }
+  .next {
+    margin: 8px;
+  }
+  /* ---------- Страница МАГАЗИН ----------- */
+  .item-carousel-wrapper{
+    display: none;
+  }
+  .gallery-shop-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 14vh;
+    overflow: hidden; 
+  }
+  .shop-carousel-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .shop-carousel-slide {
+    display: flex;
+    justify-content: center;
+    background-color: #212121;
+    transition: transform 0.5s ease;
+    height: 60vw;
+  }
+  .shop-carousel-slide img {
+    display: none;
+    max-width: 55vw;
+    max-height: 55vw;
+    padding: 45px;
+  }
+  .shop-carousel-slide a{
+    padding: 0;
+  }
+  .counter_mobile {
+    display: flex;
+    width: 100%;
+    font-size: 15vw;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 4vw;
+  }
+  .current_page {
+    margin-left: 2vw;
+  }
+  .total-page {
+    margin-right: 2vw;
+  }
+  .separator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .shop-carousel-slide img.active {
+    display: block;
+  }
+  .shop-carousel-arrow {
+    width: 4vw;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prev, .next {
+    margin: 0 10px 0 10px;
+  }
+  .counter{
+    display: none;
+  }
+  .item_name{
+    display: block;
+    color: #000;
+    font-size: 5vw;
+    padding: 3vw 0 0 7vw;
+    font-family: 'InterLightItalic';
+  }
+  /* ------- Страница товара "Шопер" ------- */
+  .shop_container{
+    border: 0.15vw solid rgb(77,77,77);
+    min-height: 90vh;
+    margin: 2.5vw;
+  }
+  .back_button_2{
+    margin: 5vw 0 0 2vw;
+  }
+  .back_button_2 a{
+    margin: 2.5vw 0 0 2vw;
+    font-size: 4vw;
+  }
+  .shop-col{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .shoper_title{
+    margin: 3vw 0 10vw 0;
+    height: auto;
+    font-size: 10vw;
+  }
+  .shoper_title p{
+    font-size: 6vw;
+    margin-right: 3vw;
+  }
+  .shop_description{
+    margin: 0;
+    font-size: 5vw;
+  }
+  .shop_description p{
+    margin: 0 0 5vw 0;
+    opacity: 70%;
+  }
+  .shoper-img{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .price{
+    color: #fff;
+    opacity: 80%;
+    font-size: 7vw;
+    margin-bottom: 2vw;
+    text-align: center;
+  }
+  .buy-button{
+    display: flex;
+    justify-content: center;
+    padding: 2vw 0 4vw 0;
+  }
+  .buy-button a{
+    font-size: 1.5vw;
+    padding: 3vw 13vw 3vw 13vw;
+    border: 0.1vw solid #fff;
+    font-size: 5vw;
+  }
+  
+  /* Страница 404 */
+
+  .text_404{
+    color: white;
+    font-family: "InterLight";
+    display: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 22vh;
+  }
+  .text_404 p{
+    opacity: 80%;
+    line-height: 1.2;
+    font-size: 22px;
+  }
+  .text_404 a{
+    opacity: 80%;
+    font-size: 22px;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    color: #ffffff;
+  }
+  .text_404 h2{
+    padding: 40px 0 60px 0;
+    font-size: 170px;
+  }
+}
+
