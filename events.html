@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="stylesheets/style.css" />
+	<link type="image/x-icon" href="#" rel="icon">
+	<title>ELEMENT – События</title>
+	<script src="javascripts/main.js"></script>
+	<script src="javascripts/events.js"></script>
+</head>
+<body>
+	<div class="header-dark">
+		<div class="header-left">
+			<a href="index.html">ELEMENT</a>
+		</div>
+		<div class="header-right">
+			<a href="creators.html">КОМАНДА</a>
+			<a href="projects.html">ПРОЕКТЫ</a>
+			<a href="events.html">СОБЫТИЯ</a>
+			<a href="shop.html">МАГАЗИН</a>
+		</div>
+		<div class="burger-menu">
+			<img src="images/burger-menu.svg" class="burger-icon">
+			<div class="mobile-menu" style="background-color: #212121;">
+			<div class="main-menu">
+			<a href="index.html"></a>
+			<img src="images/burger-menu.svg" class="burger-icon">
+			</div>
+			<div class="main-menu-cols">
+			<a href="index.html">ГЛАВНАЯ</a>
+			<img src="images/arrow_white.svg" class="arrow-menu">
+			</div>
+			<hr class="mobile_hr-dark"> 
+			<a href="creators.html">КОМАНДА</a>
+			<hr class="mobile_hr-dark">
+			<a href="projects.html">ПРОЕКТЫ</a>
+			<hr class="mobile_hr-dark">
+			<a href="events.html">СОБЫТИЯ</a>
+			<hr class="mobile_hr-dark">
+			<a href="shop.html">МАГАЗИН</a>
+			</div>
+		</div>
+	</div>
+	<div class="background-lines">
+		<div class="lines">
+			<img src="images/bg_line2.svg" class="divider-line-2 pc">
+		</div>
+		<div class="lines">
+			<img src="images/bg_line2.svg" class="divider-line-2 pc">
+		</div>
+		<div class="lines">
+			<img src="images/bg_line2.svg" class="divider-line-2 pc">
+		</div>
+		<div class="lines">
+			<img src="images/line_events.svg" class="divider-line-events mb">
+		</div>
+		<div class="lines">
+			<img src="images/line_events.svg" class="divider-line-events mb">
+		</div>
+	</div>
+	<div class="page_title">
+		<h2 class="events_title" data-text="OUR EVENTS">OUR EVENTS</h2>
+	</div>
+	<div class="order">
+		<p>УПОРЯДОЧИТЬ</p>
+	</div>
+	<div class="event-container">
+		<div class="event-wrapper">
+			<div class="event-title">(5)</div>
+			<img src="images/poster_5gs.svg" data-original="images/poster_5gs.svg" data-alternate="images/poster_5.svg" class="clickable-poster">
+		</div>
+		<div class="event-wrapper">
+			<div class="event-title_right">(3)</div>
+			<img src="images/poster_3gs.svg" data-original="images/poster_3gs.svg" data-alternate="images/poster_3.svg" class="clickable-poster">
+		</div>
+	<div class="event-wrapper">
+        <div class="event-title">(4)</div>
+    <img src="images/poster_4gs.svg" data-original="images/poster_4gs.svg" data-alternate="images/poster_4.svg" class="clickable-poster">
+    </div>
+	<div class="event-wrapper">
+        <div class="event-title">(2)</div>
+        <img src="images/poster_2gs.svg" data-original="images/poster_2gs.svg" data-alternate="images/poster_2.svg" class="clickable-poster">
+    </div>
+	<div class="event-wrapper">
+        <div class="event-title_right">(1)</div>
+        <img src="images/poster_1gs.svg" data-original="images/poster_1gs.svg" data-alternate="images/poster_1.svg" class="clickable-poster">
+    </div>
+		<div class="event-wrapper">
+        <div class="event-title">(8)</div>
+		<img src="images/poster_8gs.svg" data-original="images/poster_8gs.svg" data-alternate="images/poster_8.svg" class="clickable-poster">
+    </div>
+		<div class="event-wrapper">
+        <div class="event-title">(7)</div>
+		<img src="images/poster_7gs.svg" data-original="images/poster_7gs.svg" data-alternate="images/poster_7.svg" class="clickable-poster">
+    </div>
+	<div class="event-wrapper">
+        <div class="event-title_right">(6)</div>
+		<img src="images/poster_6gs.svg" data-original="images/poster_6gs.svg" data-alternate="images/poster_6.svg" class="clickable-poster">
+    </div>
+	<div class="event-wrapper">
+        <div class="event-title_right">(9)</div>
+		<img src="images/poster_9gs.svg" data-original="images/poster_9gs.svg" data-alternate="images/poster_9.svg" class="clickable-poster">
+    </div>
+</div>
+<footer class="footer_light">
+	<div class="footer-form_dark">
+		<div class="footer-form-text_dark">
+			<p>Подход, который меняет взгляд на архитектуру</p>
+			<h3>ЗАКАЗАТЬ ДОМ СВОЕЙ МЕЧТЫ</h3>
+		</div>
+		<div class="footer-form-image">
+    		<img src="images/arrow_white.svg" alt="Заказать" id="popupTrigger">
+  		</div>
+		<div class="popup-overlay" id="popupOverlay">
+        	<div class="popup-content">
+				<h2 class="popup-title"  style="color: #fff;"><span class="pc"> / </span> ЗАКАЗАТЬ ДОМ <br class="mb"> СВОЕЙ МЕЧТЫ</h2>
+				<div class="contact-info" style="color: #fff;">
+					<p >КОНТАКТНАЯ ИНФОРМАЦИЯ</p>
+				</div>
+				<div class="order-form" style="color: #fff;">
+					<input class="input-field" placeholder="Имя*">
+					<input class="input-field" placeholder="Фамилия*">
+				</div>
+				<div class="order-form" style="color: #fff;">
+					<input class="input-field" placeholder="Телефон*">
+					<input class="input-field" placeholder="Email*">
+				</div>
+				<div class="contact-info" style="color: #fff;">
+					<p>ДЕТАЛИ ПРОЕКТА</p>
+				</div>
+				<div class="order-form">
+					<input class="input-field" placeholder="Город">
+					<input class="input-field" placeholder="Назначение объекта">
+				</div>
+				<div class="order-form">
+					<input class="input-field" placeholder="Бюджет">
+					<input class="input-field" placeholder="Сроки реализации">
+				</div>
+				<a class="submit-btn" style="color: #fff;">ОТПРАВИТЬ</a>
+        	</div>
+    	</div>
+	</div>
+	<hr class="custom-hr_dark">
+	<div class="footer_columns-dark">
+		<div class="contacts">
+			<h4>( Контакты )</h4>
+			<p>+7 932 463 21 22 <br> ELEMENT@GMAIL.COM</p>
+		</div>
+		<div class="mode">
+			<h4>( Режим работы )</h4>
+			<div class="time-row">
+				<p>ПН-ПТ</p>
+        		<p>9:00-18:30</p>
+			</div>
+			<div class="time-row">
+				<p>СБ</p>
+        		<p>9:00-16:00</p>
+			</div>
+			<div class="time-row">
+				<p>ВС</p>
+        		<p>ВЫХОДНОЙ</p>
+			</div>
+		</div>
+		<div class="socials">
+			<h4>( Соц.сети )</h4>
+			<p>INSTAGRAM <br> FACEBOOK</p>
+		</div>
+		<div class="address">
+			<h4>( Адрес )</h4>
+			<p>ПАРКОВАЯ 21к1 <br> Г.МОСКВА <br> 100345</p>
+		</div>
+	</div>
+	<div class="footer-container">
+		<div class="footer-word">
+			<p style="color: #fff;">ELEMENT</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
