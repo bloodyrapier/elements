@@ -584,7 +584,7 @@
   .shop-carousel-slide img {
     display: none;
     max-width: 55vw;
-    max-height: 55vw;
+    max-height: auto;
     padding: 45px;
   }
   .shop-carousel-slide a{
