@@ -1,9 +1,0 @@
-/* Бегущая строка заголовков страниц */
-@keyframes runningText {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-65%);
-    }
-}
