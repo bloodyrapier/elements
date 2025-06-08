@@ -292,7 +292,8 @@ body {
 .page_title, .page_title_short {
   display: flex;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
