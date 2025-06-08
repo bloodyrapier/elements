@@ -8,6 +8,7 @@ body {
 .white_theme{
   background-color: #ffff;
   min-height: 100vh;
+  overflow: hidden;
 }
 .header-light, .header-dark {
   display: flex;
