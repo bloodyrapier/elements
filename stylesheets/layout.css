@@ -292,11 +292,10 @@ body {
 .page_title, .page_title_short {
   display: flex;
   justify-content: center;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
 }
 .page_title h2{
   font-family: 'InterLight';
