@@ -406,16 +406,16 @@ body {
   background-repeat: no-repeat;
 }
 .column-1{
-  background-image: url('/images/bg_creators.png');
+  background-image: url('../images/bg_creators.png');
 }
 .column-2{
-  background-image: url('/images/bg_projects.png');
+  background-image: url('../images/bg_projects.png');
 }
 .column-3{
-  background-image: url('/images/bg_events.png');
+  background-image: url('../images/bg_events.png');
 }
 .column-4{
-  background-image: url('/images/bg_shop.png');
+  background-image: url('../images/bg_shop.png');
 }
 .bg-video {
   position: absolute;
