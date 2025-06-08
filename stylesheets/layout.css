@@ -10,6 +10,9 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+.dark_theme{
+  overflow: hidden;
+}
 .header-light, .header-dark {
   display: flex;
   justify-content: space-between;
