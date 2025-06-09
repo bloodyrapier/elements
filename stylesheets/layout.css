@@ -25,7 +25,7 @@ body {
 }
 .header-light a, .header-dark a{
   text-decoration: none;
-  font-size: 1.3vw;
+  font-size: 26px;
 }
 .header-light a{
   color: #212121;
