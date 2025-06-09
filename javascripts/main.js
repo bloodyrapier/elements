@@ -45,24 +45,45 @@ document.addEventListener('DOMContentLoaded', function() {
             popupOverlay.style.display = 'none';
         });
     }
-    //ВИДЕО ПРИ НАВЕДЕНИИ
+//ВИДЕО ПРИ НАВЕДЕНИИ
     const videos = document.querySelectorAll('.bg-video');
-    const isMobile = window.innerWidth < 768;
-    videos.forEach(video => {
-        if (isMobile) {
-            // Автозапуск на мобильных
-            video.style.opacity = '1';
-        } else {
-            // Видео по ховеру на десктопах
-            video.parentElement.addEventListener('mouseenter', () => {
+
+    function showvideo() {
+        const isMobile = window.innerWidth < 768;
+        videos.forEach(video => {
+            const parent = video.parentElement;
+            parent.removeEventListener('mouseenter', MouseEnter);
+            parent.removeEventListener('mouseleave', MouseLeave);
+            
+            if (isMobile) {
+                // Автозапуск на мобильных
                 video.style.opacity = '1';
-                video.play();
-            });
-            video.parentElement.addEventListener('mouseleave', () => {
+                video.play().catch(e => console.log('Autoplay prevented:', e));
+            } else {
+                // Видео по ховеру на десктопах
                 video.style.opacity = '0';
                 video.pause();
                 video.currentTime = 0;
-            });
-        }
-    });
+                
+                // Добавляем обработчики для десктопа
+                parent.addEventListener('mouseenter', MouseEnter);
+                parent.addEventListener('mouseleave', MouseLeave);
+            }
+        });
+    }
+    // Обработчики для десктопного поведения
+    function MouseEnter(e) {
+        const video = e.currentTarget.querySelector('.bg-video');
+        video.style.opacity = '1';
+        video.play();
+    }
+    function MouseLeave(e) {
+        const video = e.currentTarget.querySelector('.bg-video');
+        video.style.opacity = '0';
+        video.pause();
+        video.currentTime = 0;
+    }
+    showvideo();
+    // Обработка изменения размера окна
+    window.addEventListener('resize', showvideo);
 });
