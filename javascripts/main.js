@@ -26,14 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const popupOverlay = document.getElementById('popupOverlay');
     const submitBtn = document.querySelector('.submit-btn');
     
-    // Открытие попапа при клике на изображение в футере
     if (popupTrigger && popupOverlay) {
+        // Открываем попап при клике на картинку
         popupTrigger.addEventListener('click', function() {
             popupOverlay.style.display = 'flex';
         });
+        
+        // Закрываем попап при клике вне контента
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
     }
-    // Закрытие попапа при клике на кнопку отправки
     if (submitBtn && popupOverlay) {
+        // Закрываем попап при клике на кнопку "Отправить"
         submitBtn.addEventListener('click', function() {
             popupOverlay.style.display = 'none';
         });
